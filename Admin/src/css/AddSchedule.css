@@ -1,0 +1,10 @@
+.title{
+    color:green;
+    text-align: center;
+}
+
+.filter{
+    padding:14px;
+    border-radius: 10px;
+    background-color: rgb(196, 196, 205);
+}
