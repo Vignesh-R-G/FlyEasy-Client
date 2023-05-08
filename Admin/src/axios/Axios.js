@@ -2,6 +2,6 @@ import axios from "axios"
 
 export default axios.create(
     {
-        baseURL:"https://fly-easy-cs5h.onrender.com"
+        baseURL:"https://fly-easy.onrender.com"
     }
 )
