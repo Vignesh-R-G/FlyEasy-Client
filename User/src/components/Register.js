@@ -55,7 +55,7 @@ export const Register=()=>{
             <br></br>
             <div className="row">
                 <div className="col-md-4"></div>
-                <div className="col-md-4"> 
+                <div className="col-md-4 login"> 
                         <div>  
                             <div>
                                 <h1 className="title" style={{textAlign:"center"}}>SignUp</h1>

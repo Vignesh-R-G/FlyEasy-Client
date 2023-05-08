@@ -9,6 +9,7 @@ import {Loading} from './Loading'
 import { NavigationBar } from './Navbar'
 import { UnAuthorized } from './UnAuthorized'
 import {RiFlightTakeoffFill} from 'react-icons/ri'
+import '../css/Login.css'
 
 export const Login=()=>{
 
@@ -63,7 +64,7 @@ export const Login=()=>{
             <br></br>
             <div className="row">
                 <div className="col-md-4"></div>
-                <div className="col-md-4"> 
+                <div className="col-md-4 login"> 
                         <div>  
                             <div className='login'>
                                 <h1 className='title' style={{textAlign:"center"}}>User Login</h1>

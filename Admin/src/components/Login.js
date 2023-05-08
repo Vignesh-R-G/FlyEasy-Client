@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css"
 import { useNavigate } from 'react-router-dom'
 import { context } from './Context'
 import {Loading} from './Loading'
+import '../css/Login.css'
 import { NavigationBar } from './Navbar'
 
 export const Login=()=>{
@@ -64,7 +65,7 @@ export const Login=()=>{
             <br></br>
             <div className="row">
                 <div className="col-md-4"></div>
-                <div className="col-md-4"> 
+                <div className="col-md-4 login"> 
                         <div>  
                             <div className='login'>
                                 <h1 className='title' style={{textAlign:"center"}}>Admin Login</h1>

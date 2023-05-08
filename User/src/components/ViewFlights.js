@@ -101,7 +101,22 @@ export const ViewFlights=()=>{
     }
 
 
-    const searchflight=(e)=>{
+    const searchflightbydate=(e)=>{
+        axios.get(`/admin/flight/filterflightsbydate/${fromlocation}/${tolocation}/${date}`).then((res)=>{
+            if(res.data.status){
+                getSearchInfo(res.data.msg)
+            }
+            else{
+                toast.warning(res.data.msg)
+            }
+        }).catch((err)=>{
+            console.log(err)
+            setLoading(false)
+        })
+        e.preventDefault()
+    }
+
+    const searchflightbydatetime=(e)=>{
         axios.get(`/admin/flight/filterflights/${fromlocation}/${tolocation}/${date}`).then((res)=>{
             if(res.data.status){
                 getSearchInfo(res.data.msg)
@@ -146,7 +161,7 @@ export const ViewFlights=()=>{
                         <div className="row">
                             <div className='col-md-4'></div>
                             <div className='col-md-4 filter'>
-                                <form onSubmit={searchflight}>
+                                <form>
                                 <div className='form-group'>
                                     <label style={{color:'green',fontWeight:'bold',fontFamily:'sans-serif'}}> From : </label>
                                     <input type="text" placeholder='Enter the starting location' onChange={(e)=>setFromLocation(e.target.value)} className="form-control" required></input>
@@ -159,7 +174,8 @@ export const ViewFlights=()=>{
                                     <br></br>
                                 </div>
                                 <br></br>
-                                <button type="submit" className='btn btn-success'>Search Flights</button>
+                                <button type="submit" onClick={searchflightbydate} className='btn btn-success'>Search By Date</button>
+                                <button type="submit" style={{position:"relative",left:"3px"}}onClick={searchflightbydatetime} className='btn btn-success'>Search By DateTime</button>
                                 </form>
                             </div>
                             <div className='col-md-4'></div>
